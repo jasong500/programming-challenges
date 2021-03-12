@@ -51,7 +51,33 @@ namespace gproNet
 		{
 		case ID_NEW_INCOMING_CONNECTION:
 			//printf("A connection is incoming.\n");
+
+			//store the new user in a list of all connected users
+			//send the user a list of all available rooms to join and their ping in terms of that particular player
+
 			return true;
+
+		case ID_ROOMS_JOIN:
+		{
+			//send the room the ID of the player that just attempted to join the room
+			//make sure there is space for the player and if there is actually join the room
+			//add that player to the list of users in said room
+			//broadcast that said player just joined the room
+
+		}
+		case ID_ROOMS_LEAVE:
+		{
+			//remove the user from the list of users in the specified room
+			//return the player to the lobby and send the player the list of available game rooms
+			//broadcast that said player just left the room
+
+		}
+		case ID_ROOM_CREATE:
+		{
+			//ask the user for a room name and will check to see if the room exists
+			//if the room exists return and error telling the player that a room with said name already exists
+			//otherwise create the room and automatically join the room
+		}
 		case ID_NO_FREE_INCOMING_CONNECTIONS:
 			//printf("The server is full.\n");
 			return true;

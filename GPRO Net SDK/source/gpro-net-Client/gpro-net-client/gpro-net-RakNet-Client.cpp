@@ -58,6 +58,9 @@ namespace gproNet
 			break;
 		case ID_REMOTE_NEW_INCOMING_CONNECTION:
 			//printf("Another client has connected.\n");
+
+			//connecting to the master server
+
 			break;
 		case ID_NO_FREE_INCOMING_CONNECTIONS:
 			//printf("The server is full.\n");
